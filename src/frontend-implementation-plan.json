@@ -1,0 +1,53 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "Add quotation request form for dismantling services",
+  "requirements": [
+    {
+      "id": "REQ-7",
+      "summary": "Create a quotation request form component that allows companies to submit dismantling service details",
+      "acceptanceCriteria": [
+        "Form includes all required fields: company name, contact person, phone number, email, site type dropdown, site address, size/scope, and notes textarea",
+        "Form validates required fields before submission",
+        "Form follows existing design patterns from DealerProfileSetup.tsx and CompanyProfileSetup.tsx",
+        "Form uses consistent styling with earthy color scheme (greens, browns, oranges)",
+        "Form displays success toast notification on submission"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/QuotationRequestForm.tsx",
+          "operation": "create",
+          "description": "Create a form component for quotation requests with fields for company name, contact person, phone number, email, site type (dropdown with options: hotel/office/company/other), site address, size information (height, width, length with units dropdown), and additional notes textarea. Follow the same React Hook Form patterns used in DealerProfileSetup.tsx and CompanyProfileSetup.tsx. Include validation for required fields (company name, contact person, phone number, email, site type, site address). Use the backend's addQuotationRequest function which accepts companyName, contactPerson, phoneNumber, email, siteType, siteAddress, sizeInfo array (each with height, width, length, units), and additionalNotes. Display toast notification on successful submission. Style with earthy color scheme matching the existing design system. Verify the authorization component's usage instructions before implementing to ensure proper authentication handling."
+        },
+        {
+          "path": "frontend/src/hooks/useQueries.ts",
+          "operation": "modify",
+          "description": "Add a mutation hook for submitting quotation requests using the backend's addQuotationRequest function. Include automatic query invalidation if needed for future admin views. Follow existing patterns for dealer and company profile mutations. The mutation should accept all quotation request fields and handle success/error states appropriately."
+        }
+      ]
+    },
+    {
+      "id": "REQ-9",
+      "summary": "Integrate the quotation request form into the landing page services section with a prominent call-to-action",
+      "acceptanceCriteria": [
+        "A 'Request Quote' or 'Get Quote' button is added to the dismantling services card in the services section",
+        "Button uses consistent styling with other call-to-action elements",
+        "Clicking the button opens the quotation form (modal or dedicated route)",
+        "Form is accessible without requiring authentication",
+        "Form submission provides clear feedback to the user"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/LandingPage.tsx",
+          "operation": "modify",
+          "description": "Add a 'Request Quote' button to the dismantling services card in the services section. The button should use consistent styling with existing call-to-action elements (similar to hero section buttons). Wire the button to open a modal dialog containing the QuotationRequestForm component. Ensure the form is accessible without requiring authentication (guests can submit quotation requests). Use shadcn/ui Dialog component for the modal implementation to maintain design consistency."
+        },
+        {
+          "path": "frontend/src/components/QuotationRequestModal.tsx",
+          "operation": "create",
+          "description": "Create a modal wrapper component using shadcn/ui Dialog that contains the QuotationRequestForm component. The modal should have a clean, professional appearance with proper spacing and the earthy color scheme. Include a close button and handle modal state management. The modal should be triggered from the landing page services section and allow guest users to submit quotation requests without authentication."
+        }
+      ]
+    }
+  ]
+}

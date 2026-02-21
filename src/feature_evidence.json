@@ -1,0 +1,45 @@
+{
+  "kind": "feature_evidence_report",
+  "features": [
+    {
+      "featureId": "feature-create-a-quotation-request-form-component-that-allows-companies-to-submit-details-about-sites-they-need-dismantled-including-fields-for-company-name-contact-person-phone-number-email-site-type-hotel-office-company-other-site-address-approximate-size-or-scope-and-additional-notes",
+      "featureTitle": "Create a quotation request form component that allows companies to submit details about sites they need dismantled, including fields for company name, contact person, phone number, email, site type (hotel/office/company/other), site address, approximate size or scope, and additional notes",
+      "files": [
+        "frontend/src/components/QuotationRequestForm.tsx",
+        "frontend/src/hooks/useQueries.ts"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-7"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-integrate-the-quotation-request-form-into-the-landing-page-services-section-with-a-prominent-call-to-action-button-that-opens-the-form-in-a-modal-or-navigates-to-a-dedicated-page",
+      "featureTitle": "Integrate the quotation request form into the landing page services section with a prominent call-to-action button that opens the form in a modal or navigates to a dedicated page",
+      "files": [
+        "frontend/src/components/QuotationRequestModal.tsx",
+        "frontend/src/pages/LandingPage.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-9"
+      ],
+      "confidence": "high"
+    }
+  ]
+}

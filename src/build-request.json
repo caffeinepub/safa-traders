@@ -1,0 +1,84 @@
+{
+  "kind": "build_request",
+  "title": "Add quotation request form for dismantling services",
+  "projectName": "Safa Traders",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-7",
+      "text": "Create a quotation request form component that allows companies to submit details about sites they need dismantled, including fields for company name, contact person, phone number, email, site type (hotel/office/company/other), site address, approximate size or scope, and additional notes",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-latest"
+        ],
+        "quotes": [
+          "Add quotation request"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Form includes all required fields: company name, contact person, phone number, email, site type dropdown, site address, size/scope, and notes textarea",
+        "Form validates required fields before submission",
+        "Form follows existing design patterns from DealerProfileSetup.tsx and CompanyProfileSetup.tsx",
+        "Form uses consistent styling with earthy color scheme (greens, browns, oranges)",
+        "Form displays success toast notification on submission"
+      ]
+    },
+    {
+      "id": "REQ-8",
+      "text": "Add backend functionality to store and retrieve quotation requests with fields for company name, contact person, phone number, email, site type, site address, size information, additional notes, submission timestamp, and requester principal",
+      "target": "backend",
+      "source": {
+        "messageIds": [
+          "msg-latest"
+        ],
+        "quotes": [
+          "Add quotation request"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Backend defines a QuotationRequest type with all required fields",
+        "Backend provides a function to submit new quotation requests",
+        "Backend provides a function to retrieve quotation requests (accessible by authorized users)",
+        "Quotation requests are stored persistently in stable storage",
+        "Each quotation request is associated with the submitter's principal for tracking"
+      ]
+    },
+    {
+      "id": "REQ-9",
+      "text": "Integrate the quotation request form into the landing page services section with a prominent call-to-action button that opens the form in a modal or navigates to a dedicated page",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-latest"
+        ],
+        "quotes": [
+          "Add quotation request"
+        ]
+      },
+      "acceptanceCriteria": [
+        "A 'Request Quote' or 'Get Quote' button is added to the dismantling services card in the services section",
+        "Button uses consistent styling with other call-to-action elements",
+        "Clicking the button opens the quotation form (modal or dedicated route)",
+        "Form is accessible without requiring authentication",
+        "Form submission provides clear feedback to the user"
+      ]
+    }
+  ],
+  "constraints": [
+    "Maintain single-actor architecture in backend/main.mo",
+    "Follow existing form patterns from DealerProfileSetup.tsx and CompanyProfileSetup.tsx",
+    "Use existing color scheme and design system (earthy tones: greens, browns, oranges)",
+    "Preserve immutable frontend paths (hooks/useInternetIdentity, hooks/useActor, main.tsx, components/ui)"
+  ],
+  "nonGoals": [
+    "Email notification system for new quotation requests",
+    "Admin dashboard for managing quotation requests",
+    "Payment processing for quotations",
+    "Automatic quote calculation or pricing logic"
+  ],
+  "imageRequirements": {
+    "required": [],
+    "edits": []
+  }
+}

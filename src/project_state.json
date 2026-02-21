@@ -1,0 +1,128 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 7,
+  "summary": "Safa Traders: A website app for a scrap business with dealer and company login profiles, WhatsApp integration, contact information display, and dismantling services for hotels, offices, companies, and other sites",
+  "architectural_notes": [
+    "Two-tier authentication system: separate login flows for dealers and companies",
+    "Contact details: 8688981604, 8688853148, safatraders66@gmail.com",
+    "WhatsApp integration for direct messaging (8688853148)",
+    "Services section showcasing dismantling capabilities for commercial properties (hotels, offices, companies, sites)"
+  ],
+  "known_issues": [],
+  "isFixRequest": false,
+  "existing_features": [
+    {
+      "id": "feature-create-a-dealer-login-profile-system-that-allows-scrap-dealers-to-authenticate-and-access-their-profile",
+      "title": "Create a dealer login profile system that allows scrap dealers to authenticate and access their profile",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-a-company-login-profile-system-that-allows-companies-to-authenticate-and-access-their-profile",
+      "title": "Create a company login profile system that allows companies to authenticate and access their profile",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-a-whatsapp-button-that-opens-a-chat-with-phone-number-8688853148",
+      "title": "Add a WhatsApp button that opens a chat with phone number 8688853148",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-display-contact-information-including-phone-numbers-8688981604-and-8688853148-and-email-safatraders66-gmail-com",
+      "title": "Display contact information including phone numbers 8688981604 and 8688853148, and email safatraders66@gmail.com",
+      "reqIds": [
+        "REQ-4"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-design-a-professional-industry-appropriate-visual-theme-for-a-scrap-trading-business-with-warm-earthy-tones-greens-browns-oranges-that-convey-reliability-and-sustainability-using-clean-typography-and-a-structured-layout-that-emphasizes-trust-and-professionalism",
+      "title": "Design a professional, industry-appropriate visual theme for a scrap trading business with warm, earthy tones (greens, browns, oranges) that convey reliability and sustainability, using clean typography and a structured layout that emphasizes trust and professionalism",
+      "reqIds": [
+        "REQ-5"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-a-services-section-to-the-landing-page-that-prominently-displays-the-dismantling-service-offering-with-the-text-we-also-dismantle-hotel-office-company-or-any-site-alongside-existing-recycling-services",
+      "title": "Add a services section to the landing page that prominently displays the dismantling service offering with the text 'We also dismantle hotel, office, company, or any site' alongside existing recycling services",
+      "reqIds": [
+        "REQ-6"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-a-quotation-request-form-component-that-allows-companies-to-submit-details-about-sites-they-need-dismantled-including-fields-for-company-name-contact-person-phone-number-email-site-type-hotel-office-company-other-site-address-approximate-size-or-scope-and-additional-notes",
+      "title": "Create a quotation request form component that allows companies to submit details about sites they need dismantled, including fields for company name, contact person, phone number, email, site type (hotel/office/company/other), site address, approximate size or scope, and additional notes",
+      "reqIds": [
+        "REQ-7"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-integrate-the-quotation-request-form-into-the-landing-page-services-section-with-a-prominent-call-to-action-button-that-opens-the-form-in-a-modal-or-navigates-to-a-dedicated-page",
+      "title": "Integrate the quotation request form into the landing page services section with a prominent call-to-action button that opens the form in a modal or navigates to a dedicated page",
+      "reqIds": [
+        "REQ-9"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "Dealer login profile system",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-2",
+      "summary": "Company login profile system",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-3",
+      "summary": "WhatsApp button integration (8688853148)",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-4",
+      "summary": "Display contact information (phone numbers and email)",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-5",
+      "summary": "Display dismantling services for hotels, offices, companies, and other sites",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-6",
+      "summary": "Add quotation request form for dismantling services",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-8",
+      "summary": "Add backend functionality to store and retrieve quotation requests with fields for company name, contact person, phone number, email, site type, site address, size information, additional notes, submission timestamp, and requester principal",
+      "reqIds": [
+        "REQ-8"
+      ],
+      "status": "pending"
+    }
+  ],
+  "projectName": "Safa Traders",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}
